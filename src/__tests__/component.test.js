@@ -238,7 +238,6 @@ describe('Components', () => {
             );
 
             expect(toJson(todo)).toMatchSnapshot();
-            expect(todo.props().style).toEqual({ margin: '1rem 0' });
             expect(todo.props().className).toBe('todo');
             
         });

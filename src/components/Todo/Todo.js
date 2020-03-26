@@ -19,13 +19,13 @@ export const Todo = ({
     const { sub, edit } = useActions(todoActions);
 
     return (
-        <Card style={{ margin: '1rem 0'}} className={styles['todo']}>
+        <Card className={styles['todo']}>
             <Row>
                 <Col style={{ flex: 1 }}>
                     <Input style={{ flex: 1 }} 
-                            type="text" 
-                            placeholder="Enter todo" value={name} 
-                            onChange={val => edit({ id, name: val })} 
+                        type="text" 
+                        placeholder="Enter todo" value={name} 
+                        onChange={val => edit({ id, name: val })} 
                     />
 
                     <Input style={{ flex: 1, marginTop: 25 }} 
