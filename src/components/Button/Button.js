@@ -1,5 +1,7 @@
 import React from 'react';
-import { classes } from '../utils';
+import { classes } from '../../utils';
+
+import styles from './button.scss';
 
 export const Button = ({ 
     color,
@@ -11,12 +13,12 @@ export const Button = ({
     ...props
 }) => (
     <button className={classes(
-        'btn',
+        styles['btn'],
         className, 
-        color,
-        inactive && 'inactive',
-        circ && 'circ',
-        rounded && 'rounded'
+        color && styles[color],
+        inactive && styles['inactive'],
+        circ && styles['circ'],
+        rounded && styles['rounded']
     )} {...props}>
         {children}
     </button>

@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux'
 
 import Todo from './components/Todo';
-import Button from './components/Button';
-import ButtonGroup from './components/ButtonGroup';
-import Container from './components/Container';
-import Card from './components/Card';
-import Input from './components/Input';
-import Row from './components/Row';
-import Col from './components/Col';
+
+import {
+    Button, 
+    ButtonGroup,
+    Container,
+    Card,
+    Input,
+    Row,
+    Col
+} from './components';
+
 
 import * as todoActions from './state/todo/actions';
 import * as recActions from './state/rec/actions';

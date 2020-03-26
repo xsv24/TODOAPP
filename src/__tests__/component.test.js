@@ -4,17 +4,18 @@ import { shallow } from 'enzyme';
 import * as redux from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 
-import Col from '../components/Col';
-import Row from '../components/Row';
-import Card from '../components/Card';
-import Container from '../components/Container';
-import ButtonGroup from '../components/ButtonGroup';
-import Button from '../components/Button';
-import Input from '../components/Input';
-
+import {
+    Col,
+    Row,
+    Card,
+    Container,
+    Button,
+    ButtonGroup,
+    Input,
+} from '../components'
 
 import { App } from '../App';
-import Todo from '../components/Todo';
+import Todo from '../components/Todo/Todo';
 
 const mockSelectors = (state) => {
     const mockStore = configureMockStore()({
@@ -39,9 +40,8 @@ describe('Components', () => {
 
             expect(toJson(col)).toMatchSnapshot();
 
+            expect(col.props().className).toBe('col');
             expect(col.props().style).toEqual({
-                display: 'flex',
-                flexDirection: 'column',
                 justifyContent: 'space-between',
                 alignContent: 'center'
             });
@@ -52,9 +52,8 @@ describe('Components', () => {
             
             expect(toJson(col)).toMatchSnapshot();
 
+            expect(col.props().className).toBe('col');
             expect(col.props().style).toEqual({
-                display: 'flex',
-                flexDirection: 'column',
                 justifyContent: 'space-around',
                 alignContent: 'flex-start',
                 padding: 20
@@ -68,9 +67,8 @@ describe('Components', () => {
 
             expect(toJson(row)).toMatchSnapshot();
 
+            expect(row.props().className).toBe('row');
             expect(row.props().style).toEqual({
-                display: 'flex',
-                flexDirection: 'row',
                 justifyContent: 'space-between',
                 alignContent: 'center'
             });
@@ -80,10 +78,8 @@ describe('Components', () => {
             const row  = shallow(<Row style={{ padding: 20 }} justify='space-around' align='flex-start' />);
 
             expect(toJson(row)).toMatchSnapshot();
-
+            expect(row.props().className).toBe('row');
             expect(row.props().style).toEqual({
-                display: 'flex',
-                flexDirection: 'row',
                 justifyContent: 'space-around',
                 alignContent: 'flex-start',
                 padding: 20
@@ -242,7 +238,7 @@ describe('Components', () => {
             );
 
             expect(toJson(todo)).toMatchSnapshot();
-            expect(todo.props().style).toEqual({ margin: '1em 0' });
+            expect(todo.props().style).toEqual({ margin: '1rem 0' });
             expect(todo.props().className).toBe('todo');
             
         });

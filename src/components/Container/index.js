@@ -1,5 +1,7 @@
 import React from 'react';
-import { classes } from '../utils';
+import { classes } from '../../utils';
+
+import './container.global.scss';
 
 export const Container = ({ 
     className,

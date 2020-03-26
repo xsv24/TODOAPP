@@ -1,3 +1,5 @@
+@import './styles/colors.scss';
+
 html, body {
     margin: 0;
     padding: 0;
@@ -21,106 +23,5 @@ body {
 }
 
 small {
-    color: #B9BAB8;
-}
-
-input {
-    border: none;
-    box-shadow: none;
-    min-height: 35px;
-    border-width: 0;
-    outline: none;
-    font-size: 1.5rem;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom ease-in-out 0.4s;
-
-    &:hover, &:focus, &:active {
-        border-bottom: 1px solid #aeaeae;
-    }
-}
-
-.container {
-    padding: 15px 10px;
-}
-
-$primary: #0E79B2;
-$success: #4CB944;
-$danger: #FF5A5F;
-$btn-color: #fff;
-
-.btn-group {
-    padding: 0 10px;
-    margin: auto 0;
-    
-    .btn {
-        margin: 0 5px;
-    }
-
-    &:first-child {
-        padding-left: 0;
-    }
-
-    &:last-child {
-        padding-right: 0;
-    }
-}
-
-.btn {
-    min-height: 3rem;
-    min-width: 5rem;
-    border-radius: 3px;
-    color: $btn-color;
-    background-color: $primary;
-    border-width: 0;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: transform ease-in-out 0.4s, opactiy ease-in-out 0.4s;
-    opacity: 0.9;
-
-    &[disabled] {
-        border: 2px solid;
-        cursor: not-allowed;
-        background-color: rgba($color: $primary, $alpha: 0.8);
-        border-color: $primary;
-
-        &:hover {
-            opacity: 0.9;
-            transform: scale(1);
-        }
-    }
-
-    &:hover {
-        transform: scale(1.05);
-        opacity: 1;
-    }
-
-    &.circ {
-        border-radius: 100%;
-        min-width: 3rem;
-        min-height: 3rem;
-        text-align: center;
-    }
-
-    &.rounded {
-        min-width: 5rem;
-        border-radius: 50px;
-    }
-
-    &.danger {
-        background-color: $danger;
-
-        &[disabled] {
-            background-color: rgba($color: $danger, $alpha: 0.8);
-            border-color: $danger;
-        }
-    }
-
-    &.success {
-        background-color: $success;
-
-        &[disabled] {
-            background-color: rgba($color: $success, $alpha: 0.8);
-            border-color: $success;
-        }
-    }
+    color: $greyed;
 }

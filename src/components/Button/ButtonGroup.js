@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { classes } from '../utils';
+import { classes } from '../../utils';
+import styles from './button.scss';
 
 export const ButtonGroup = ({
     className,
     children,
     ...props
 }) => (
-    <div className={classes('btn-group', className)} {...props}>
+    <div className={classes(styles['btn-group'], className)} {...props}>
         {children}
     </div>
 );

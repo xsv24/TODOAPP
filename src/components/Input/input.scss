@@ -1,0 +1,14 @@
+input {
+    border: none;
+    box-shadow: none;
+    min-height: 35px;
+    border-width: 0;
+    outline: none;
+    font-size: 1.5rem;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom ease-in-out 0.4s;
+
+    &:hover, &:focus, &:active {
+        border-bottom: 1px solid #aeaeae;
+    }
+}

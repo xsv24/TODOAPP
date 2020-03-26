@@ -1,15 +1,17 @@
 import React from 'react';
 
+import { classes } from '../../utils';
+import './row.global.scss';
+
 export const Row = ({
     style,
     justify,
     align,
+    className,
     children,
     ...props
 }) => (
-    <div style={{ 
-        display: 'flex', 
-        flexDirection: 'row', 
+    <div className={classes('row', className)} style={{
         justifyContent: justify || 'space-between', 
         alignContent: align || 'center',
         ...style

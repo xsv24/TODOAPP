@@ -1,0 +1,20 @@
+.card.todo {
+    @keyframes pop {
+        0% { transform: scale(0); }
+        65% { transform: scale(1.01); }
+        100% { transform: scale(1); }
+    }
+
+    animation: pop 0.5s ease-in-out;
+
+    @media (max-width: 768px) {
+        .row {
+            flex-direction: column;
+        }
+
+        .col.actions {
+            padding-top: 15px;
+            flex-direction: row;
+        }
+    }
+}

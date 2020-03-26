@@ -26,6 +26,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "html-webpack-plugin": "^4.0.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^25.1.0",
     "jest-transform-stub": "^2.0.0",
     "node-sass": "^4.13.1",
@@ -53,7 +54,7 @@
       ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
     "moduleNameMapper": {
-      "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     }
   }
 }
